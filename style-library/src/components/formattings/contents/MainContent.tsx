@@ -1,35 +1,42 @@
-import React, { useState, useMemo } from "react";
-import style from "./mainContent.module.css";
+import React, { useState, useMemo, useEffect } from "react";
+import style from "./styles/mainContent.module.css";
 import MenuPanel from "../panels/MenuPanel";
 import DrawerButton from "../buttons/DrawerButton";
 import ContentPanel from "../panels/ContentPanel";
 import CodePanel from "../panels/CodePanel";
+import { useMainContent } from "./hooks/useMainContent";
 
-function MainContent() {
-  const panelWidth = 300;
+export type mainContentProps = {
+  panelPortions?: {
+    left?: number;
+    right?: number;
+  };
+};
 
-  const [leftButtonPosition, setLeftButtonPosition] =
-    useState<number>(panelWidth);
-  const [rightButtonPosition, setRightButtonPosition] = useState<number>(
-    window.innerWidth - panelWidth
-  );
-  const [currentPositionButton, setCurrentPositionButton] = useState<number>(); //0=left, 1=right
-
-  const leftPanelWidth = useMemo<number>(() => {
-    return leftButtonPosition;
-  }, [leftButtonPosition]);
-  const midPanelWidth = useMemo<number>(() => {
-    return rightButtonPosition - leftButtonPosition;
-  }, [leftButtonPosition, rightButtonPosition]);
+function MainContent(props: mainContentProps) {
+  const minPanelWidth = 60;
+  const {
+    leftPanelWidth,
+    rightPanelWidth,
+    windowWidth,
+    currentPositionButton,
+    setCurrentPositionButton,
+    setLeftButtonPosition,
+    setRightButtonPosition,
+  } = useMainContent(props);
 
   return (
     <>
       <div
         className={style.container_div}
         onMouseMove={(e) => {
-          if (currentPositionButton === 0) setLeftButtonPosition(e.clientX);
-          else if (currentPositionButton === 1)
+          if (currentPositionButton === 0) {
+            setLeftButtonPosition(
+              e.clientX < minPanelWidth ? minPanelWidth : e.clientX
+            );
+          } else if (currentPositionButton === 1) {
             setRightButtonPosition(e.clientX);
+          }
         }}
         onMouseUp={() => {
           setCurrentPositionButton(undefined);
@@ -46,7 +53,11 @@ function MainContent() {
           }}
         />
         <div>
-          <div style={{ width: `${midPanelWidth}px` }}>
+          <div
+            style={{
+              width: `${windowWidth - leftPanelWidth - rightPanelWidth}px`,
+            }}
+          >
             <ContentPanel></ContentPanel>
           </div>
         </div>

@@ -1,0 +1,12 @@
+.panel_styel_div {
+  margin: 5px;
+  background-color: var(--panel-color);
+  border-radius: var(--panel-border-radius);
+  border: var(--panel-border);
+}
+.header_div {
+  border-bottom: var(--panel-header-divide-line);
+}
+.children_div {
+  margin-top: 10px;
+}

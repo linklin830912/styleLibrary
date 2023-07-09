@@ -1,24 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export type themeSpliceType = {
+export type colorSliceType = {
   mainColor: string;
   backgroundColor: string;
+  panelColor: string;
   utilColor: string;
   warningColor: string;
+  shadowColor: string;
 };
 
-const themeSlice = createSlice({
+const colorSlice = createSlice({
   name: "theme",
   initialState: {
     mainColor: "blue",
     backgroundColor: "violet",
+    panelColor: "pink",
     utilColor: "white",
     warningColor: "brown",
-  } as themeSpliceType,
+    shadowColor: "orange",
+  } as colorSliceType,
   reducers: {
     handleColorChange: (state, action) => {},
   },
 });
 
-export const { handleColorChange } = themeSlice.actions;
-export default themeSlice.reducer;
+export const { handleColorChange } = colorSlice.actions;
+export default colorSlice.reducer;

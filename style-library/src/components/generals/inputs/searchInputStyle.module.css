@@ -1,0 +1,23 @@
+.container_input {
+  background-color: transparent;
+  width: 70%;
+  min-width: 25px;
+
+  padding: 5px;
+  margin-bottom: var(--input-text-margin-bottom);
+  margin-right: var(--input-text-margin-right);
+
+  border-radius: var(--input-text-border-radius);
+  border: var(--input-text-border);
+}
+.container_input:focus {
+  border: var(--input-text-border-focus);
+  box-shadow: var(--input-text-shadow-box) var(--shadow-color);
+}
+
+@container (width <= 100px) {
+  .container_input::placeholder::before {
+    color: red;
+    content: "...";
+  }
+}

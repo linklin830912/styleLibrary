@@ -5,10 +5,10 @@ import { useAppSelector } from "./app/hooks";
 import MainContent from "./components/formattings/contents/MainContent";
 
 function App() {
-  const theme = useAppSelector((state) => state.theme);
+  const color = useAppSelector((state) => state.color);
   return (
     <>
-      <Global styles={globalStyle(theme)} />
+      <Global styles={globalStyle(color)} />
       <MainContent />
     </>
   );
