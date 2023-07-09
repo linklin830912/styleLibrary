@@ -1,0 +1,14 @@
+.container_ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 0px;
+}
+.li_div {
+  display: flex;
+  align-items: center;
+}
+.li_div > *:nth-child(2) {
+  margin-left: 5px;
+
+  color: var(--font-main-color);
+}

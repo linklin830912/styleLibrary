@@ -18,6 +18,7 @@ function globalStyle(color: colorSliceType) {
       "--warning-color": color.warningColor,
       "--shadow-color": color.shadowColor,
       "--border-color": color.mainColor,
+      "--font-main-color": color.mainColor,
 
       "--input-text-margin-bottom": "5px",
       "--input-text-margin-right": "10px",

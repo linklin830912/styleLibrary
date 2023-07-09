@@ -44,7 +44,7 @@ function MainContent(props: mainContentProps) {
       >
         <div>
           <div style={{ width: `${leftPanelWidth}px` }}>
-            <MenuPanel></MenuPanel>
+            <MenuPanel />
           </div>
         </div>
         <DrawerButton
@@ -58,7 +58,7 @@ function MainContent(props: mainContentProps) {
               width: `${windowWidth - leftPanelWidth - rightPanelWidth}px`,
             }}
           >
-            <ContentPanel></ContentPanel>
+            <ContentPanel />
           </div>
         </div>
         <DrawerButton
@@ -69,7 +69,7 @@ function MainContent(props: mainContentProps) {
         />
         <div>
           <div>
-            <CodePanel></CodePanel>
+            <CodePanel />
           </div>
         </div>
       </div>
