@@ -3,7 +3,10 @@ import style from "./styles/menuPanelStyle.module.css";
 import SearchInput from "../../generals/inputs/SearchInput";
 import { Panel } from "./Panel";
 import BranchList from "../../generals/Lists/BranchList";
-import { generalRoutes } from "../../../app/routes/route";
+import { dataEntryRoutes, generalRoutes } from "../../../app/routes/route";
+import PressButton from "../buttons/PressButton";
+import HeaderType from "../../generals/enums/HeaderType";
+import StatusType from "../../generals/enums/StatusType";
 
 function MenuPanel() {
   const limitWidth = 75;
@@ -29,6 +32,17 @@ function MenuPanel() {
       <Panel header="GENERAL">
         <BranchList listItems={generalRoutes} />
       </Panel>
+      <Panel header="DATA ENTRY">
+        <BranchList listItems={dataEntryRoutes} />
+      </Panel>
+      <PressButton
+        title="press button"
+        onClick={() => {}}
+        status={StatusType.main}
+        size={HeaderType.h1}
+        isRoundCornered={false}
+        isStretch={false}
+      />
     </div>
   );
 }

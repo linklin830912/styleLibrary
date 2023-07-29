@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-type fontSliceType = {
+export type fontSliceType = {
   mainFont: string;
   untilFont: string;
 };
@@ -8,8 +8,8 @@ type fontSliceType = {
 const fontSlice = createSlice({
   name: "font",
   initialState: {
-    mainFont: `1.2em "Fira Sans", sans-serif`,
-    untilFont: "",
+    mainFont: `"Fira Sans", sans-serif`,
+    untilFont: `italic small-caps normal 16px/2 cursive`,
   } as fontSliceType,
   reducers: {
     handleFontChange: (state, action) => {},

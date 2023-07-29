@@ -3,10 +3,8 @@ import DrawerButton from "../../components/formattings/buttons/DrawerButton";
 
 const meta: Meta<typeof DrawerButton> = {
   component: DrawerButton,
-  title: "drawer button",
-  parameters: {
-    CSSVariableReferenceValue: { "--util-color": "pink" },
-  },
+  title: "Buttons/drawerbutton",
+  parameters: {},
 };
 
 export default meta;

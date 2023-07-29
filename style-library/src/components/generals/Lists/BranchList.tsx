@@ -22,7 +22,9 @@ function BranchList(props: branchListProps) {
                 isEnd={index === props.listItems.length - 1}
                 stroke={color.mainColor}
               />
-              <Link to={item.value}>{item.name}</Link>
+              <span>
+                <Link to={item.value}>{item.name}</Link>
+              </span>
             </div>
           </li>
         ))}
@@ -37,28 +39,21 @@ type branchListSvgProps = {
   isEnd?: boolean;
 };
 function BranchListSvg(props: branchListSvgProps) {
-  if (isTrue(props.isEnd)) {
-    return (
-      <svg
-        viewBox="0 0 5 10"
-        width={"10px"}
-        strokeWidth={"0.5px"}
-        stroke={props.stroke}
-        fill="transparent"
-      >
-        <polyline points="5,5 0.53,5 0.53,0 " />
-      </svg>
-    );
-  }
   return (
     <svg
       viewBox="0 0 5 10"
       width={"10px"}
       strokeWidth={"0.5px"}
       stroke={props.stroke}
+      fill="transparent"
     >
-      <line x1="0.53" y1="0" x2="0.53" y2="10" />
-      <line x1="0.53" y1="5" x2="5" y2="5" />
+      {isTrue(props.isEnd) && <polyline points="5,5 0.53,5 0.53,0 " />}
+      {!isTrue(props.isEnd) && (
+        <>
+          <line x1="0.53" y1="0" x2="0.53" y2="10" />
+          <line x1="0.53" y1="5" x2="5" y2="5" />
+        </>
+      )}
     </svg>
   );
 }

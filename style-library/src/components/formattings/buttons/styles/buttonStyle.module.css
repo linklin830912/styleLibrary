@@ -1,0 +1,59 @@
+.container_button {
+  border: 0 solid transparent;
+  padding: 0px;
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container_button > div {
+  padding: 3px 12px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fit {
+  width: fit-content;
+}
+.stretch {
+  width: 95%;
+}
+.round {
+  border-radius: 100px;
+}
+.square {
+  border-radius: var(--corner-fillet);
+}
+.main {
+  background-color: var(--main-color);
+  box-shadow: var(--box-shadow) var(--main-color-shade);
+}
+.background {
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow) var(--background-color-shade);
+}
+.disabled {
+  background-color: var(--disabled-color);
+  box-shadow: var(--box-shadow) var(--disabled-color-shade);
+}
+.danger {
+  background-color: var(--danger-color);
+  box-shadow: var(--box-shadow) var(--danger-color-shade);
+}
+
+.ghosted {
+  background-color: var(--ghosted-color);
+  box-shadow: var(--box-shadow) var(--ghosted-color-shade);
+}
+
+.special {
+  background-color: var(--special-color);
+  box-shadow: var(--box-shadow) var(--special-color-shade);
+}

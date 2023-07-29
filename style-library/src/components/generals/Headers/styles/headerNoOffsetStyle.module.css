@@ -1,0 +1,18 @@
+.main {
+  color: var(--main-color-font);
+}
+.background {
+  color: var(--background-color-font);
+}
+.disabled {
+  color: var(--disabled-color-font);
+}
+.danger {
+  color: var(--danger-color-font);
+}
+.ghosted {
+  color: var(--ghosted-color-font);
+}
+.special {
+  color: var(--special-color-font);
+}
