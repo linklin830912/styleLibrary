@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./styles/menuPanelStyle.module.css";
-import SearchInput from "../../generals/inputs/SearchInput";
 import { Panel } from "./Panel";
-import BranchList from "../../generals/Lists/BranchList";
 import { dataEntryRoutes, generalRoutes } from "../../../app/routes/route";
-import PressButton from "../buttons/PressButton";
-import HeaderType from "../../generals/enums/HeaderType";
-import StatusType from "../../generals/enums/StatusType";
+import SearchInput from "../../inputs/SearchInput";
+import BranchList from "../../Lists/BranchList";
+import PressButton from "../../styles/buttons/PressButton";
+import StatusType from "../../styles/generals/enums/StatusType";
+import HeaderType from "../../styles/generals/enums/HeaderType";
 
 function MenuPanel() {
   const limitWidth = 75;

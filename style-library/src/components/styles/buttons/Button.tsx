@@ -1,12 +1,11 @@
-import React, { useMemo, useRef, useEffect } from "react";
+import React, { useMemo } from "react";
 import buttonProps, { defaultButtonProps } from "./props/buttonProps";
 import style from "./styles/buttonStyle.module.css";
 import { convertStatusToStyle } from "../../../untils/styles/convertStatusToStyle";
-
+import Header from "../Headers/Header";
 /**link's note: remeber addon styles also have to be import here */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import pressButtonStyle from "./styles/pressButtonStyle.module.css";
-import Header from "../generals/Headers/Header";
 
 function Button(props: buttonProps) {
   const className = useMemo<string>(() => {

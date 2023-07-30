@@ -1,8 +1,8 @@
-import isTrue from "../../../../untils/generals/isTrue";
-import { convertStatusToStyle } from "../../../../untils/styles/convertStatusToStyle";
-import { defaultButtonProps } from "../../buttons/props/buttonProps";
-import HeaderType from "../enums/HeaderType";
-import StatusType from "../enums/StatusType";
+import isTrue from "../../../untils/generals/isTrue";
+import { convertStatusToStyle } from "../../../untils/styles/convertStatusToStyle";
+import { defaultButtonProps } from "../buttons/props/buttonProps";
+import HeaderType from "../generals/enums/HeaderType";
+import StatusType from "../generals/enums/StatusType";
 import noOffsetStyle from "./styles/headerNoOffsetStyle.module.css";
 import offsetStyle from "./styles/headerOffsetStyle.module.css";
 import style from "./styles/headerStyle.module.css";
