@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import style from "./styles/horizontalPagingStyle.module.css";
 import HorizontalPagingButton from "./HorizontalPagingButton";
-import StatusType from "../../generals/enums/StatusType";
+import StatusType from "../generals/enums/StatusType";
 
 type horizontalPagingProps = {
   defaultLeft?: number;

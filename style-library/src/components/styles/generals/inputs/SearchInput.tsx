@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import style from "./searchInputStyle.module.css";
-import isTrue from "../../../untils/generals/isTrue";
+import isTrue from "../../../../untils/generals/isTrue";
 
 type SearchInputProps = {
   text: string;

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import style from "./styles/horizontalPagingButtonStyle.module.css";
-import StatusType from "../../generals/enums/StatusType";
 import { convertStatusToStyle } from "../../../untils/styles/convertStatusToStyle";
+import StatusType from "../generals/enums/StatusType";
 
 type horizontalPagingButtonProps = {
   onLoad?: (x: number) => void;

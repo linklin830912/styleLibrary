@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import HeaderType from "../../components/generals/enums/HeaderType";
-import BorderButton from "../../components/formattings/buttons/BorderButton";
-import StatusType from "../../components/generals/enums/StatusType";
+import BorderButton from "../../components/styles/buttons/BorderButton";
+import StatusType from "../../components/styles/generals/enums/StatusType";
+import HeaderType from "../../components/styles/generals/enums/HeaderType";
 
 const meta = {
   title: "Buttons/border-button",

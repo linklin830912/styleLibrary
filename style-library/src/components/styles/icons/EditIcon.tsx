@@ -1,7 +1,7 @@
 import React from "react";
 import StatusType from "../generals/enums/StatusType";
 import style from "./styles/editIconStyle.module.css";
-import { convertStatusToStyle } from "../../untils/styles/convertStatusToStyle";
+import { convertStatusToStyle } from "../../../untils/styles/convertStatusToStyle";
 
 type editIconProps = {
   status?: StatusType;

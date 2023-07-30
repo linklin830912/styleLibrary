@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import PressButton from "../../components/formattings/buttons/PressButton";
-import HeaderType from "../../components/generals/enums/HeaderType";
-import StatusType from "../../components/generals/enums/StatusType";
-
+import PressButton from "../../components/styles/buttons/PressButton";
+import StatusType from "../../components/styles/generals/enums/StatusType";
+import HeaderType from "../../components/styles/generals/enums/HeaderType";
 const meta = {
   title: "Buttons/press-button",
   component: PressButton,

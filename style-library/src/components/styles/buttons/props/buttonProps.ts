@@ -1,5 +1,5 @@
-import HeaderType from "../../../generals/enums/HeaderType";
-import StatusType from "../../../generals/enums/StatusType";
+import HeaderType from "../../generals/enums/HeaderType";
+import StatusType from "../../generals/enums/StatusType";
 
 type buttonProps = {
   title: string;

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import HorizontalPaging from "../../components/formattings/pagings/HorizontalPaging";
 import MockPagingContent from "./MockPagingContent";
-import StatusType from "../../components/generals/enums/StatusType";
+import StatusType from "../../components/styles/generals/enums/StatusType";
+import HorizontalPaging from "../../components/styles/pagings/HorizontalPaging";
 
 const meta = {
   title: "Pagings/horizontal-paging",
