@@ -1,0 +1,98 @@
+.container_div {
+  width: 100%;
+}
+.container_button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 5px;
+  height: 100%;
+
+  cursor: col-resize;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_div {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.left_svg {
+  width: 5px;
+  grid-column: 1;
+  margin-right: 8px;
+  left: -5px;
+}
+.right_svg {
+  width: 5px;
+  grid-column: 3;
+}
+
+.main {
+  background-color: var(--main-color);
+}
+.main:hover {
+  box-shadow: 0 0 10px 1px var(--main-color-shade);
+}
+.main circle {
+  fill: var(--main-color);
+}
+.background {
+  background-color: var(--background-color);
+}
+.background:hover {
+  box-shadow: 0 0 10px 1px var(--background-color-shade);
+}
+.background circle {
+  fill: var(--background-color);
+}
+.disabled {
+  background-color: var(--disabled-color);
+}
+.disabled:hover {
+  box-shadow: 0 0 10px 1px var(--disabled-color-shade);
+}
+.disabled circle {
+  fill: var(--disabled-color);
+}
+.danger {
+  background-color: var(--danger-color);
+}
+.danger:hover {
+  box-shadow: 0 0 10px 1px var(--danger-color-shade);
+}
+.danger circle {
+  fill: var(--danger-color);
+}
+.ghosted {
+  background-color: var(--ghosted-color);
+}
+.ghosted:hover {
+  box-shadow: 0 0 10px 1px var(--ghosted-color-shade);
+}
+.ghosted circle {
+  fill: var(--ghosted-color);
+}
+.special {
+  background-color: var(--special-color);
+}
+.special:hover {
+  box-shadow: 0 0 10px 1px var(--special-color-shade);
+}
+.special circle {
+  fill: var(--special-color);
+}
+.basic {
+  background-color: var(--basic-color);
+}
+.basic:hover {
+  box-shadow: 0 0 10px 1px var(--basic-color-shade);
+}
+.basic circle {
+  fill: var(--basic-color);
+}

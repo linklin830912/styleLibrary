@@ -15,6 +15,7 @@ export const Primary: Story = {
   args: {
     title: "Border Button",
     isRoundCornered: true,
+    isSub: false,
     isStretch: true,
     status: StatusType.main,
     size: HeaderType.h4,

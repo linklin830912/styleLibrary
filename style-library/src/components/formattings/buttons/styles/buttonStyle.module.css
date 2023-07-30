@@ -1,5 +1,4 @@
 .container_button {
-  border: 0 solid transparent;
   padding: 0px;
   margin: 10px;
 
@@ -7,6 +6,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-width: var(--button-border-width);
+  border-style: solid;
 }
 
 .container_button > div {
@@ -33,27 +34,65 @@
 }
 .main {
   background-color: var(--main-color);
-  box-shadow: var(--box-shadow) var(--main-color-shade);
+  border-color: var(--main-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--main-color-shade);
+}
+.main > div > div {
+  background-color: var(--main-color-font);
 }
 .background {
   background-color: var(--background-color);
-  box-shadow: var(--box-shadow) var(--background-color-shade);
+  border-color: var(--background-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--background-color-shade);
+}
+.background > div > div {
+  background-color: var(--background-color-font);
 }
 .disabled {
   background-color: var(--disabled-color);
-  box-shadow: var(--box-shadow) var(--disabled-color-shade);
+  border-color: var(--disabled-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--disabled-color-shade);
+}
+.disabled > div > div {
+  background-color: var(--disabled-color-font);
 }
 .danger {
   background-color: var(--danger-color);
-  box-shadow: var(--box-shadow) var(--danger-color-shade);
+  border-color: var(--danger-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--danger-color-shade);
 }
-
+.danger > div > div {
+  background-color: var(--danger-color-font);
+}
 .ghosted {
   background-color: var(--ghosted-color);
-  box-shadow: var(--box-shadow) var(--ghosted-color-shade);
+  border-color: var(--ghosted-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--ghosted-color-shade);
 }
-
+.ghosted > div > div {
+  background-color: var(--ghosted-color-font);
+}
 .special {
   background-color: var(--special-color);
-  box-shadow: var(--box-shadow) var(--special-color-shade);
+  border-color: var(--special-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--special-color-shade);
+}
+.special > div > div {
+  background-color: var(--special-color-font);
+}
+
+.basic {
+  background-color: var(--basic-color);
+  border-color: var(--basic-color-font);
+  box-shadow: inset 1px 1px 2em var(--mask-sink),
+    var(--box-shadow) var(--basic-color-shade);
+}
+.basic > div > div {
+  background-color: var(--basic-color-font) !important;
 }

@@ -9,6 +9,7 @@ import isTrue from "../../../untils/generals/isTrue";
 
 type headerProps = {
   headerType: HeaderType;
+  isSub?: boolean;
   status?: StatusType;
   value: string;
   isOffsets?: boolean;
@@ -17,10 +18,12 @@ type headerProps = {
 
 function Header(props: headerProps) {
   const statusStyle = convertStatusToStyle(
-    isTrue(props.isOffsets) ? noOffsetStyle : offsetStyle,
+    isTrue(props.isOffsets) ? offsetStyle : noOffsetStyle,
     props.status || defaultButtonProps.status
   );
-  const className = `${statusStyle} ${props.isWhiteSpace ? style.inline : ""} 
+  const className = `${statusStyle} 
+  ${props.isWhiteSpace ? style.inline : ""} 
+  ${props.isSub ? style.sub : style.main}
   ${style.header}`;
 
   switch (props.headerType) {

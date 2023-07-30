@@ -16,3 +16,6 @@
 .special {
   color: var(--special-color-font);
 }
+.basic {
+  color: var(--basic-color-font);
+}

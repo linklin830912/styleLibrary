@@ -5,6 +5,7 @@ enum StatusType {
   danger = "danger",
   ghosted = "ghost",
   special = "special",
+  basic = "basic",
 }
 
 export default StatusType;

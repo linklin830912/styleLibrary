@@ -1,0 +1,27 @@
+.container_div {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+}
+.left_div {
+  grid-column: 1;
+  padding-right: 10px;
+}
+.left_button_div {
+  grid-column: 2;
+}
+.mid_div {
+  grid-column: 3;
+  padding: 0px 10px;
+}
+.right_button_div {
+  grid-column: 4;
+}
+.right_div {
+  grid-column: 5;
+  padding-left: 10px;
+}

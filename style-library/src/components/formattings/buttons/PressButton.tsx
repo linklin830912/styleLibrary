@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import pressButtonStyle from "./styles/pressButtonStyle.module.css";
 import buttonProps from "./props/buttonProps";
 import Button from "./Button";
@@ -13,6 +13,7 @@ function PressButton(props: pressButtonProps) {
       size={props.size}
       status={props.status}
       isRoundCornered={props.isRoundCornered}
+      isSub={props.isSub}
       isOffset={props.isOffset}
       isStretch={props.isStretch}
       addonStyle={pressButtonStyle.press}

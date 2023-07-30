@@ -1,0 +1,15 @@
+.container_div {
+  /* width: 360px; */
+  /* height: 500px; */
+  margin: 0;
+  padding: 0;
+  /* background-color: chocolate; */
+  overflow: hidden;
+}
+.article {
+  padding: 5px;
+}
+
+.p {
+  font-size: 8px;
+}

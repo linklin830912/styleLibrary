@@ -9,12 +9,18 @@ function GlobalStorybookStyle() {
   const maskFloat = convertToRgba(255, 255, 255, 0.3);
   const maskSink = convertToRgba(0, 0, 0, 0.3);
 
+  const textShadow = `1px 1px 0.3em ${convertRgbTransparency(
+    maskSink,
+    0.8
+  )}, 0px 0px 0.1em ${convertRgbTransparency(maskSink, 1)}`;
+
   const mainColor = convertToRgba(16, 115, 58);
   const backgroundColor = convertToRgba(66, 112, 183);
   const disabledColor = convertToRgba(220, 220, 220);
   const dangerColor = convertToRgba(237, 24, 73);
   const ghostedColor = convertToRgba(183, 168, 210);
   const specialColor = convertToRgba(254, 227, 54);
+  const basicColor = convertToRgba(225, 225, 225);
 
   const mainColorShade = convertRgbTransparency(mainColor, 0.95);
   const mainColorFont = convertToRgba(225, 225, 225);
@@ -34,6 +40,14 @@ function GlobalStorybookStyle() {
   const specialColorShade = convertRgbTransparency(specialColor, 0.95);
   const specialColorFont = convertToRgba(225, 225, 225);
 
+  const basicColorShade = convertRgbTransparency(basicColor, 0.95);
+  const basicColorFont = convertToRgba(50, 50, 50);
+
+  const buttonBorderWidth = "3px";
+
+  const mainFontFamily = `Arial, Helvetica, sans-serif`;
+  const subFontFamily = `"Times New Roman", Times, serif`;
+
   const boxShadow = "5px 2px 8px 1px";
   const boxShadowFloat = "0px 0px 10px 0px";
   const boxShadowSink = "0px 2px 10px 0px";
@@ -49,9 +63,16 @@ function GlobalStorybookStyle() {
       styles={css({
         body: {
           "h1, h2, h3, h4, h5, h6": { margin: 0, padding: 0 },
+          "--text-shadow": textShadow,
+
+          "--main-font-family": mainFontFamily,
+          "--sub-font-family": subFontFamily,
+
           "--box-shadow": boxShadow,
           "--box-shadow-float": boxShadowFloat,
           "--box-shadow-sink": boxShadowSink,
+
+          "--button-border-width": buttonBorderWidth,
 
           "--mask-float": maskFloat,
           "--mask-sink": maskSink,
@@ -85,6 +106,10 @@ function GlobalStorybookStyle() {
           "--special-color": specialColor,
           "--special-color-shade": specialColorShade,
           "--special-color-font": specialColorFont,
+
+          "--basic-color": basicColor,
+          "--basic-color-shade": basicColorShade,
+          "--basic-color-font": basicColorFont,
         },
       })}
     />

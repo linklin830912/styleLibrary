@@ -4,12 +4,16 @@ import StatusType from "../../../generals/enums/StatusType";
 type buttonProps = {
   title: string;
   onClick: () => void;
+  onMouseDown?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   status?: StatusType;
   size?: HeaderType;
   isRoundCornered?: boolean;
   isStretch?: boolean;
   isOffset?: boolean;
   addonStyle?: string;
+  maskDivX?: number;
+  maskDivY?: number;
+  isSub?: boolean;
 };
 
 export const defaultButtonProps = {

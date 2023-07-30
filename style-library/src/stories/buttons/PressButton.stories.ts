@@ -17,6 +17,7 @@ export const Primary: Story = {
     isRoundCornered: true,
     isStretch: true,
     isOffset: true,
+    isSub: false,
     status: StatusType.main,
     size: HeaderType.h4,
   },

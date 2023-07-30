@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useRef, useEffect } from "react";
 import Header from "../../generals/Headers/Header";
 import buttonProps, { defaultButtonProps } from "./props/buttonProps";
 import style from "./styles/buttonStyle.module.css";
@@ -22,16 +22,25 @@ function Button(props: buttonProps) {
   }, [props.addonStyle, props.isRoundCornered, props.isStretch, props.status]);
 
   return (
-    <button className={className} type="button" onClick={props.onClick}>
+    <button
+      className={className}
+      type="button"
+      onClick={props.onClick}
+      onMouseDown={props.onMouseDown}
+    >
       <div>
         <Header
           status={props.status}
           headerType={props.size || defaultButtonProps.size}
           value={props.title}
           isOffsets={props.isOffset}
+          isSub={props.isSub}
           isWhiteSpace
         />
-        <div></div>
+        <div
+          className={style.mask_div}
+          style={{ top: props.maskDivY, left: props.maskDivX }}
+        ></div>
       </div>
     </button>
   );

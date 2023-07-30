@@ -1,0 +1,308 @@
+.border {
+  box-shadow: none !important;
+}
+.border:hover {
+  animation: scaleUpButton 0.5s forwards !important;
+}
+.border > div > h1,
+.border > div > h2,
+.border > div > h3,
+.border > div > h4,
+.border > div > h5,
+.border > div > h6 {
+  z-index: 10 !important;
+}
+.border > div > div {
+  position: absolute;
+  width: 2px;
+  height: 2%;
+  background-color: transparent !important;
+  border-radius: 50%;
+}
+.border:active > div > div {
+  animation: scaleUpBackground 0.5s forwards !important;
+}
+
+.main {
+  background-color: var(--main-color) !important;
+}
+.main:hover {
+  background-color: var(--main-color-font) !important;
+  border-color: var(--main-color) !important;
+}
+.main:active {
+  border-color: var(--main-color-font) !important;
+}
+.main > div > h1,
+.main > div > h2,
+.main > div > h3,
+.main > div > h4,
+.main > div > h5,
+.main > div > h6 {
+  color: var(--main-color-font) !important;
+}
+.main:hover > div > h1,
+.main:hover > div > h2,
+.main:hover > div > h3,
+.main:hover > div > h4,
+.main:hover > div > h5,
+.main:hover > div > h6 {
+  color: var(--main-color) !important;
+}
+.main:active > div > h1,
+.main:active > div > h2,
+.main:active > div > h3,
+.main:active > div > h4,
+.main:active > div > h5,
+.main:active > div > h6 {
+  color: var(--main-color-font) !important;
+}
+.main:active > div > div {
+  background-color: var(--main-color) !important;
+}
+
+.background {
+  background-color: var(--background-color) !important;
+}
+.background:hover {
+  background-color: var(--background-color-font) !important;
+  border-color: var(--background-color) !important;
+}
+.background:active {
+  border-color: var(--background-color-font) !important;
+}
+.background > div > h1,
+.background > div > h2,
+.background > div > h3,
+.background > div > h4,
+.background > div > h5,
+.background > div > h6 {
+  color: var(--background-color-font) !important;
+}
+.background:hover > div > h1,
+.background:hover > div > h2,
+.background:hover > div > h3,
+.background:hover > div > h4,
+.background:hover > div > h5,
+.background:hover > div > h6 {
+  color: var(--background-color) !important;
+}
+.background:active > div > h1,
+.background:active > div > h2,
+.background:active > div > h3,
+.background:active > div > h4,
+.background:active > div > h5,
+.background:active > div > h6 {
+  color: var(--background-color-font) !important;
+}
+.background:active > div > div {
+  background-color: var(--background-color) !important;
+}
+
+.disabled {
+  background-color: var(--disabled-color) !important;
+}
+.disabled:hover {
+  background-color: var(--disabled-color-font) !important;
+  border-color: var(--disabled-color) !important;
+}
+.disabled:active {
+  border-color: var(--disabled-color-font) !important;
+}
+.disabled > div > h1,
+.disabled > div > h2,
+.disabled > div > h3,
+.disabled > div > h4,
+.disabled > div > h5,
+.disabled > div > h6 {
+  color: var(--disabled-color-font) !important;
+}
+.disabled:hover > div > h1,
+.disabled:hover > div > h2,
+.disabled:hover > div > h3,
+.disabled:hover > div > h4,
+.disabled:hover > div > h5,
+.disabled:hover > div > h6 {
+  color: var(--disabled-color) !important;
+}
+.disabled:active > div > h1,
+.disabled:active > div > h2,
+.disabled:active > div > h3,
+.disabled:active > div > h4,
+.disabled:active > div > h5,
+.disabled:active > div > h6 {
+  color: var(--disabled-color-font) !important;
+}
+.disabled:active > div > div {
+  background-color: var(--disabled-color) !important;
+}
+
+.danger {
+  background-color: var(--danger-color) !important;
+}
+.danger:hover {
+  background-color: var(--danger-color-font) !important;
+  border-color: var(--danger-color) !important;
+}
+.danger:active {
+  border-color: var(--danger-color-font) !important;
+}
+.danger > div > h1,
+.danger > div > h2,
+.danger > div > h3,
+.danger > div > h4,
+.danger > div > h5,
+.danger > div > h6 {
+  color: var(--danger-color-font) !important;
+}
+.danger:hover > div > h1,
+.danger:hover > div > h2,
+.danger:hover > div > h3,
+.danger:hover > div > h4,
+.danger:hover > div > h5,
+.danger:hover > div > h6 {
+  color: var(--danger-color) !important;
+}
+.danger:active > div > h1,
+.danger:active > div > h2,
+.danger:active > div > h3,
+.danger:active > div > h4,
+.danger:active > div > h5,
+.danger:active > div > h6 {
+  color: var(--danger-color-font) !important;
+}
+.danger:active > div > div {
+  background-color: var(--danger-color) !important;
+}
+
+.ghosted {
+  background-color: var(--ghosted-color) !important;
+}
+.ghosted:hover {
+  background-color: var(--ghosted-color-font) !important;
+  border-color: var(--ghosted-color) !important;
+}
+.ghosted:active {
+  border-color: var(--ghosted-color-font) !important;
+}
+.ghosted > div > h1,
+.ghosted > div > h2,
+.ghosted > div > h3,
+.ghosted > div > h4,
+.ghosted > div > h5,
+.ghosted > div > h6 {
+  color: var(--ghosted-color-font) !important;
+}
+.ghosted:hover > div > h1,
+.ghosted:hover > div > h2,
+.ghosted:hover > div > h3,
+.ghosted:hover > div > h4,
+.ghosted:hover > div > h5,
+.ghosted:hover > div > h6 {
+  color: var(--ghosted-color) !important;
+}
+.ghosted:active > div > h1,
+.ghosted:active > div > h2,
+.ghosted:active > div > h3,
+.ghosted:active > div > h4,
+.ghosted:active > div > h5,
+.ghosted:active > div > h6 {
+  color: var(--ghosted-color-font) !important;
+}
+.ghosted:active > div > div {
+  background-color: var(--ghosted-color) !important;
+}
+
+.special {
+  background-color: var(--special-color) !important;
+}
+.special:hover {
+  background-color: var(--special-color-font) !important;
+  border-color: var(--special-color) !important;
+}
+.special:active {
+  border-color: var(--special-color-font) !important;
+}
+.special > div > h1,
+.special > div > h2,
+.special > div > h3,
+.special > div > h4,
+.special > div > h5,
+.special > div > h6 {
+  color: var(--special-color-font) !important;
+}
+.special:hover > div > h1,
+.special:hover > div > h2,
+.special:hover > div > h3,
+.special:hover > div > h4,
+.special:hover > div > h5,
+.special:hover > div > h6 {
+  color: var(--special-color) !important;
+}
+.special:active > div > h1,
+.special:active > div > h2,
+.special:active > div > h3,
+.special:active > div > h4,
+.special:active > div > h5,
+.special:active > div > h6 {
+  color: var(--special-color-font) !important;
+}
+.special:active > div > div {
+  background-color: var(--special-color) !important;
+}
+
+.basic {
+  background-color: var(--basic-color) !important;
+}
+.basic:hover {
+  background-color: var(--basic-color-font) !important;
+  border-color: var(--basic-color) !important;
+}
+.basic:active {
+  border-color: var(--basic-color-font) !important;
+}
+.basic > div > h1,
+.basic > div > h2,
+.basic > div > h3,
+.basic > div > h4,
+.basic > div > h5,
+.basic > div > h6 {
+  color: var(--basic-color-font) !important;
+}
+.basic:hover > div > h1,
+.basic:hover > div > h2,
+.basic:hover > div > h3,
+.basic:hover > div > h4,
+.basic:hover > div > h5,
+.basic:hover > div > h6 {
+  color: var(--basic-color) !important;
+}
+.basic:active > div > h1,
+.basic:active > div > h2,
+.basic:active > div > h3,
+.basic:active > div > h4,
+.basic:active > div > h5,
+.basic:active > div > h6 {
+  color: var(--basic-color-font) !important;
+}
+.basic:active > div > div {
+  background-color: var(--basic-color) !important;
+}
+
+@keyframes scaleUpButton {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+
+@keyframes scaleUpBackground {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1000);
+  }
+}

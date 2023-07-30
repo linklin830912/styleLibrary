@@ -9,25 +9,20 @@ type drawerButtonProps = {
 
 function DrawerButton(props: drawerButtonProps) {
   return (
-    <>
-      <button
-        className={style.container_button}
-        onMouseDown={props.onMouseDown}
+    <button className={style.container_button} onMouseDown={props.onMouseDown}>
+      <div
+        className={
+          isTrue(props.isFlipped) ? style.flipped_div : style.notFlipped_div
+        }
       >
-        <div
-          className={
-            isTrue(props.isFlipped) ? style.flipped_div : style.notFlipped_div
-          }
-        >
+        <div className={style.filled_div}></div>
+        <div>
           <div className={style.filled_div}></div>
-          <div>
-            <div className={style.filled_div}></div>
-            <div className={style.filled_div}></div>
-            <div className={style.filled_div}></div>
-          </div>
+          <div className={style.filled_div}></div>
+          <div className={style.filled_div}></div>
         </div>
-      </button>
-    </>
+      </div>
+    </button>
   );
 }
 export default DrawerButton;

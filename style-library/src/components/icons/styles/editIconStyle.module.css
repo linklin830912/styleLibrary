@@ -1,0 +1,21 @@
+.main .rect {
+  fill: var(--main-color);
+}
+.background .rect {
+  fill: var(--background-color);
+}
+.disabled .rect {
+  fill: var(--disabled-color);
+}
+.danger .rect {
+  fill: var(--danger-color);
+}
+.ghosted .rect {
+  fill: var(--ghosted-color);
+}
+.special .rect {
+  fill: var(--special-color);
+}
+.basic .rect {
+  fill: var(--basic-color);
+}

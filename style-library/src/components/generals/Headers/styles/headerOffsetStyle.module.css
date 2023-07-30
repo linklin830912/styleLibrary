@@ -1,25 +1,29 @@
 .main {
   color: var(--main-color);
-  text-shadow: 0px 0px 0.2em var(--main-color-font);
+  text-shadow: var(--text-shadow);
 }
 
 .background {
   color: var(--background-color);
-  text-shadow: 0 1px 0.2em var(--background-color-font);
+  text-shadow: var(--text-shadow);
 }
 .disabled {
   color: var(--disabled-color);
-  text-shadow: 0 1px 0.2em var(--disabled-color-font);
+  text-shadow: var(--text-shadow);
 }
 .danger {
   color: var(--danger-color);
-  text-shadow: 0 1px 0.2em var(--danger-color-font);
+  text-shadow: var(--text-shadow);
 }
 .ghosted {
   color: var(--ghosted-color);
-  text-shadow: 0 1px 0.2em var(--ghosted-color-font);
+  text-shadow: var(--text-shadow);
 }
 .special {
   color: var(--special-color);
-  text-shadow: 0 1px 0.2em var(--special-color-font);
+  text-shadow: var(--text-shadow);
+}
+.basic {
+  color: var(--basic-color);
+  text-shadow: var(--text-shadow);
 }

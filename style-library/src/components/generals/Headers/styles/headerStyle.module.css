@@ -3,3 +3,9 @@
 .inline {
   white-space: nowrap;
 }
+.sub {
+  font-family: var(--sub-font-family);
+}
+.main {
+  font-family: var(--main-font-family);
+}
