@@ -1,0 +1,100 @@
+.textarea {
+  width: 100%;
+  overflow: hidden;
+  resize: vertical;
+  padding: 0px;
+  border: 1px solid;
+  border-radius: var(--corner-fillet);
+  font-family: var(--sub-header-font-family);
+}
+.textarea:hover {
+  animation: scaleUp 0.5s;
+}
+.textarea:focus {
+  border-radius: var(--corner-fillet);
+  border: 3px solid;
+  outline: none;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.01);
+  }
+}
+.h1 {
+  font-size: var(--font-size-h1);
+}
+.h2 {
+  font-size: var(--font-size-h2);
+}
+.h3 {
+  font-size: var(--font-size-h3);
+}
+.h4 {
+  font-size: var(--font-size-h4);
+}
+.h5 {
+  font-size: var(--font-size-h5);
+}
+.h6 {
+  font-size: var(--font-size-h6);
+}
+
+.main {
+  border-color: var(--main-color);
+  color: var(--main-color-font);
+}
+.main:focus {
+  border-color: var(--main-color);
+  box-shadow: var(--box-shadow) var(--main-color-shade);
+}
+.background {
+  border-color: var(--background-color);
+  color: var(--background-color-font);
+}
+.background:focus {
+  border-color: var(--background-color);
+  box-shadow: var(--box-shadow) var(--background-color-shade);
+}
+.disabled {
+  border-color: var(--disabled-color);
+  color: var(--disabled-color-font);
+}
+.disabled:focus {
+  border-color: var(--disabled-color);
+  box-shadow: var(--box-shadow) var(--disabled-color-shade);
+}
+.danger {
+  border-color: var(--danger-color);
+  color: var(--danger-color-font);
+}
+.danger:focus {
+  border-color: var(--danger-color);
+  box-shadow: var(--box-shadow) var(--danger-color-shade);
+}
+.ghosted {
+  border-color: var(--ghosted-color);
+  color: var(--ghosted-color-font);
+}
+.ghosted:focus {
+  border-color: var(--ghosted-color);
+  box-shadow: var(--box-shadow) var(--ghosted-color-shade);
+}
+.special {
+  border-color: var(--special-color);
+  color: var(--special-color-font);
+}
+.special:focus {
+  border-color: var(--special-color);
+  box-shadow: var(--box-shadow) var(--special-color-shade);
+}
+.basic {
+  border-color: var(--basic-color);
+  color: var(--basic-color-font);
+}
+.basic:focus {
+  border-color: var(--basic-color);
+  box-shadow: var(--box-shadow) var(--basic-color-shade);
+}

@@ -3,7 +3,7 @@ enum StatusType {
   background = "background",
   disabled = "disabled",
   danger = "danger",
-  ghosted = "ghost",
+  ghosted = "ghosted",
   special = "special",
   basic = "basic",
 }

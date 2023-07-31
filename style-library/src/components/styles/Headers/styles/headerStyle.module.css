@@ -1,11 +1,9 @@
-.header {
-}
 .inline {
   white-space: nowrap;
 }
-.sub {
-  font-family: var(--sub-font-family);
+.sub_header {
+  font-family: var(--sub-header-font-family);
 }
-.main {
-  font-family: var(--main-font-family);
+.header {
+  font-family: var(--header-font-family);
 }

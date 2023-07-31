@@ -5,8 +5,8 @@ import { dataEntryRoutes, generalRoutes } from "../../../app/routes/route";
 import SearchInput from "../../inputs/SearchInput";
 import BranchList from "../../Lists/BranchList";
 import PressButton from "../../styles/buttons/PressButton";
-import StatusType from "../../styles/generals/enums/StatusType";
-import HeaderType from "../../styles/generals/enums/HeaderType";
+import StatusType from "../../enums/StatusType";
+import HeaderType from "../../enums/HeaderType";
 
 function MenuPanel() {
   const limitWidth = 75;

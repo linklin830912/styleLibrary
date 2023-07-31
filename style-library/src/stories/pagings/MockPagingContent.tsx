@@ -2,12 +2,16 @@ import React from "react";
 import style from "./styles/mockPagingContentStyle.module.css";
 
 type mockPagingContentProps = {
-  width: any;
+  width?: any;
+  height?: any;
 };
 
 function MockPagingContent(props: mockPagingContentProps) {
   return (
-    <div className={style.container_div} style={{ width: props.width }}>
+    <div
+      className={style.container_div}
+      style={{ width: props.width, height: props.height }}
+    >
       <article className={style.article}>
         <section>
           <h3>header 1</h3>

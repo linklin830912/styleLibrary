@@ -1,4 +1,4 @@
-import StatusType from "../../components/styles/generals/enums/StatusType";
+import StatusType from "../../components/enums/StatusType";
 
 export function convertStatusToStyle(
   style: {

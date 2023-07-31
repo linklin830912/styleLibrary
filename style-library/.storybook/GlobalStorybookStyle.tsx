@@ -41,14 +41,14 @@ function GlobalStorybookStyle() {
   const specialColorFont = convertToRgba(225, 225, 225);
 
   const basicColorShade = convertRgbTransparency(basicColor, 0.95);
-  const basicColorFont = convertToRgba(50, 50, 50);
+  const basicColorFont = convertToRgba(150, 150, 150);
 
   const buttonBorderWidth = "3px";
 
-  const mainFontFamily = `Arial, Helvetica, sans-serif`;
-  const subFontFamily = `"Times New Roman", Times, serif`;
+  const headerFontFamily = `Arial, Helvetica, sans-serif`;
+  const subHeaderFontFamily = `"Times New Roman", Times, serif`;
 
-  const boxShadow = "5px 2px 8px 1px";
+  const boxShadow = "2px 2px 8px 1px";
   const boxShadowFloat = "0px 0px 10px 0px";
   const boxShadowSink = "0px 2px 10px 0px";
 
@@ -58,15 +58,37 @@ function GlobalStorybookStyle() {
 
   const cornerFillet = "3px";
 
+  const fontSizeHeader1 = "36px";
+  const fontSizeHeader2 = "24px";
+  const fontSizeHeader3 = "16px";
+  const fontSizeHeader4 = "12px";
+  const fontSizeHeader5 = "8px";
+  const fontSizeHeader6 = "6px";
+
   return (
     <Global
       styles={css({
         body: {
           "h1, h2, h3, h4, h5, h6": { margin: 0, padding: 0 },
+
+          h1: { fontSize: fontSizeHeader1 },
+          h2: { fontSize: fontSizeHeader2 },
+          h3: { fontSize: fontSizeHeader3 },
+          h4: { fontSize: fontSizeHeader4 },
+          h5: { fontSize: fontSizeHeader5 },
+          h6: { fontSize: fontSizeHeader6 },
+
+          "--font-size-h1": fontSizeHeader1,
+          "--font-size-h2": fontSizeHeader2,
+          "--font-size-h3": fontSizeHeader3,
+          "--font-size-h4": fontSizeHeader4,
+          "--font-size-h5": fontSizeHeader5,
+          "--font-size-h6": fontSizeHeader6,
+
           "--text-shadow": textShadow,
 
-          "--main-font-family": mainFontFamily,
-          "--sub-font-family": subFontFamily,
+          "--header-font-family": headerFontFamily,
+          "--sub-header-font-family": subHeaderFontFamily,
 
           "--box-shadow": boxShadow,
           "--box-shadow-float": boxShadowFloat,

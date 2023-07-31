@@ -1,21 +1,53 @@
-.main .rect {
+.main .path {
   fill: var(--main-color);
 }
-.background .rect {
+.background .path {
   fill: var(--background-color);
 }
-.disabled .rect {
+.disabled .path {
   fill: var(--disabled-color);
 }
-.danger .rect {
+.danger .path {
   fill: var(--danger-color);
 }
-.ghosted .rect {
+.ghosted .path {
   fill: var(--ghosted-color);
 }
-.special .rect {
+.special .path {
   fill: var(--special-color);
 }
-.basic .rect {
+.basic .path {
   fill: var(--basic-color);
+}
+
+.fill .white_fill {
+  fill: white;
+}
+.fill:hover .white_fill {
+  fill: black;
+  animation: whiteFillToBlack 0.1s linear;
+}
+
+.fill .black_stroke {
+  stroke: black;
+}
+.fill:hover .black_stroke {
+  stroke: white;
+  animation: blackStrokeToWhite 0.1s linear;
+}
+@keyframes whiteFillToBlack {
+  0% {
+    fill: white;
+  }
+  100% {
+    fill: black;
+  }
+}
+@keyframes blackStrokeToWhite {
+  0% {
+    fill: black;
+  }
+  100% {
+    fill: white;
+  }
 }

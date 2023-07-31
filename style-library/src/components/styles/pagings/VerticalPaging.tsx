@@ -1,30 +1,30 @@
 import React, { useState, useRef } from "react";
-import style from "./styles/horizontalPagingStyle.module.css";
-import HorizontalPagingButton from "./HorizontalPagingButton";
+import style from "./styles/verticalPagingStyle.module.css";
 import StatusType from "../../enums/StatusType";
 import throttle from "lodash/throttle";
+import VerticalPagingButton from "./VerticalPagingButton";
 
-type horizontalPagingProps = {
-  defaultLeft?: number;
-  defaultRight?: number;
+type verticalPagingProps = {
+  defaultTop?: number;
+  defaultBottom?: number;
   status?: StatusType;
-  left?: JSX.Element;
+  top?: JSX.Element;
   mid: JSX.Element;
-  right?: JSX.Element;
+  bottom?: JSX.Element;
 };
 
-function HorizontalPaging(props: horizontalPagingProps) {
+function VerticalPaging(props: verticalPagingProps) {
   const [draggingIndex, setDraggingIndex] = useState<number>();
 
-  const [leftWidth, setLeftWidth] = useState<number | undefined>(
-    props.defaultLeft
+  const [topHeight, setTopHeighth] = useState<number | undefined>(
+    props.defaultTop
   ); //index = 0
-  const [rightWidth, setRightWidth] = useState<number | undefined>(
-    props.defaultRight
+  const [midHeight, setMidHeight] = useState<number | undefined>(
+    props.defaultBottom
   ); //index = 1
 
-  const leftDivRef = useRef<HTMLDivElement>(null);
-  const rightDivRef = useRef<HTMLDivElement>(null);
+  const topDivRef = useRef<HTMLDivElement>(null);
+  const bottomDivRef = useRef<HTMLDivElement>(null);
   const contianerDivRef = useRef<HTMLDivElement>(null);
   const throttledHandleMouseMove = throttle(handleMouseMove, 500);
   return (
@@ -38,18 +38,18 @@ function HorizontalPaging(props: horizontalPagingProps) {
         throttledHandleMouseMove(e);
       }}
     >
-      {props.left && (
+      {props.top && (
         <>
           <div
-            className={style.left_div}
-            ref={leftDivRef}
-            style={{ width: leftWidth }}
+            className={style.top_div}
+            ref={topDivRef}
+            style={{ height: topHeight }}
           >
-            {props.left}
+            {props.top}
           </div>
 
-          <div className={style.left_button_div}>
-            <HorizontalPagingButton
+          <div className={style.top_button_div}>
+            <VerticalPagingButton
               status={props.status}
               onMouseDown={() => {
                 handleMouseDown(0);
@@ -59,11 +59,13 @@ function HorizontalPaging(props: horizontalPagingProps) {
         </>
       )}
 
-      <div className={style.mid_div}>{props.mid}</div>
-      {props.right && (
+      <div className={style.mid_div} style={{ height: midHeight }}>
+        {props.mid}
+      </div>
+      {props.bottom && (
         <>
-          <div className={style.right_button_div}>
-            <HorizontalPagingButton
+          <div className={style.bottom_button_div}>
+            <VerticalPagingButton
               status={props.status}
               onMouseDown={() => {
                 handleMouseDown(1);
@@ -71,12 +73,8 @@ function HorizontalPaging(props: horizontalPagingProps) {
             />
           </div>
 
-          <div
-            className={style.right_div}
-            ref={rightDivRef}
-            style={{ width: rightWidth }}
-          >
-            {props.right}
+          <div className={style.bottom_div} ref={bottomDivRef}>
+            {props.bottom}
           </div>
         </>
       )}
@@ -93,9 +91,9 @@ function HorizontalPaging(props: horizontalPagingProps) {
     if (draggingIndex === undefined || contianerDivRef.current === undefined) {
       return;
     } else if (draggingIndex === 0) {
-      setLeftWidth(e.pageX);
+      setTopHeighth(e.pageY);
     } else if (draggingIndex === 1) {
-      setRightWidth(calcRightWidth(e.pageX));
+      setMidHeight(calcMidHeight(e.pageY));
     }
   }
 
@@ -103,10 +101,10 @@ function HorizontalPaging(props: horizontalPagingProps) {
     setDraggingIndex(undefined);
   }
 
-  function calcRightWidth(x: number) {
-    if (contianerDivRef.current?.offsetWidth === undefined) return;
-    return contianerDivRef.current?.offsetWidth - x;
+  function calcMidHeight(y: number) {
+    if (!topHeight) return;
+    return y - topHeight;
   }
 }
 
-export default HorizontalPaging;
+export default VerticalPaging;

@@ -1,15 +1,14 @@
 import React, { useRef } from "react";
-import style from "./styles/horizontalPagingButtonStyle.module.css";
+import style from "./styles/verticalPagingButtonStyle.module.css";
 import { convertStatusToStyle } from "../../../untils/styles/convertStatusToStyle";
 import StatusType from "../../enums/StatusType";
 
-type horizontalPagingButtonProps = {
+type verticalPagingButtonProps = {
   onLoad?: (x: number) => void;
   onMouseDown?: React.MouseEventHandler<HTMLButtonElement>;
   status?: StatusType;
 };
-
-function HorizontalPagingButton(props: horizontalPagingButtonProps) {
+function VerticalPagingButton(props: verticalPagingButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const statusStyle = convertStatusToStyle(
     style,
@@ -23,18 +22,18 @@ function HorizontalPagingButton(props: horizontalPagingButtonProps) {
       onMouseDown={props.onMouseDown}
     >
       <div className={style.button_div}>
-        <div className={style.left_svg}>
-          <svg viewBox="0 0 10 35">
+        <div className={style.top_svg}>
+          <svg viewBox="0 0 35 10">
             <circle cx="5" cy="5" r="5" />
-            <circle cx="5" cy="17.5" r="5" />
-            <circle cx="5" cy="30" r="5" />
+            <circle cx="17.5" cy="5" r="5" />
+            <circle cx="30" cy="5" r="5" />
           </svg>
         </div>
-        <div className={style.right_svg}>
-          <svg viewBox="0 0 10 35">
+        <div className={style.bottom_svg}>
+          <svg viewBox="0 0 35 10">
             <circle cx="5" cy="5" r="5" />
-            <circle cx="5" cy="17.5" r="5" />
-            <circle cx="5" cy="30" r="5" />
+            <circle cx="17.5" cy="5" r="5" />
+            <circle cx="30" cy="5" r="5" />
           </svg>
         </div>
       </div>
@@ -42,4 +41,4 @@ function HorizontalPagingButton(props: horizontalPagingButtonProps) {
   );
 }
 
-export default HorizontalPagingButton;
+export default VerticalPagingButton;

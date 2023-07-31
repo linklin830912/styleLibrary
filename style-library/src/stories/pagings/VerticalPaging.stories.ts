@@ -1,24 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import MockPagingContent from "./MockPagingContent";
 import StatusType from "../../components/enums/StatusType";
-import HorizontalPaging from "../../components/styles/pagings/HorizontalPaging";
+import VerticalPaging from "../../components/styles/pagings/VerticalPaging";
 
 const meta = {
-  title: "Pagings/horizontal-paging",
-  component: HorizontalPaging,
-} satisfies Meta<typeof HorizontalPaging>;
+  title: "Pagings/vertical-paging",
+  component: VerticalPaging,
+} satisfies Meta<typeof VerticalPaging>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    defaultLeft: 250,
-    defaultRight: 150,
+    defaultTop: 250,
+    defaultBottom: 150,
     status: StatusType.basic,
-    left: MockPagingContent({ width: "100%" }),
-    mid: MockPagingContent({ width: "100%" }),
-    right: MockPagingContent({ width: "100%" }),
+    top: MockPagingContent({ height: "100%" }),
+    mid: MockPagingContent({ height: "100%" }),
+    bottom: MockPagingContent({ height: "100%" }),
   },
   argTypes: {
     status: {

@@ -1,0 +1,21 @@
+.container_div {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  grid-template-rows: auto auto 1fr auto auto;
+}
+.top_div {
+  grid-row: 1;
+}
+.top_button_div {
+  grid-row: 2;
+}
+.main_div {
+  grid-row: 3;
+}
+.bottom_button_div {
+  grid-row: 4;
+}
+.bottom_div {
+  grid-row: 5;
+}

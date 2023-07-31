@@ -31,7 +31,7 @@ function Button(props: buttonProps) {
         <Header
           status={props.status}
           headerType={props.size || defaultButtonProps.size}
-          value={props.title}
+          value0={props.title}
           isOffsets={props.isOffset}
           isSub={props.isSub}
           isWhiteSpace
