@@ -6,8 +6,6 @@ import StatusType from "../../enums/StatusType";
 import style from "./styles/editableTextStyle.module.css";
 import InputText from "../inputs/InputText";
 import { convertStatusToStyle } from "../../../untils/styles/convertStatusToStyle";
-import DuplicateIcon from "../icons/DuplicateIcon";
-import CheckedIcon from "../icons/CheckedIcon";
 
 type editableTextProps = {
   size?: HeaderType;

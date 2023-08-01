@@ -1,0 +1,11 @@
+.container_div {
+  display: inline;
+  width: 150px;
+}
+.container_button {
+  margin: 0 0 0 5px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  display: inline;
+}
