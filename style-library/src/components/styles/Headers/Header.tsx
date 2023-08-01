@@ -7,7 +7,7 @@ import offsetStyle from "./styles/headerOffsetStyle.module.css";
 import style from "./styles/headerStyle.module.css";
 
 type headerProps = {
-  headerType: HeaderType;
+  size: HeaderType;
   isSub?: boolean;
   status?: StatusType;
   value0: string;
@@ -15,6 +15,7 @@ type headerProps = {
   children?: JSX.Element;
   isOffsets?: boolean;
   isWhiteSpace?: boolean;
+  isInline?: boolean;
 };
 
 function Header(props: headerProps) {
@@ -23,11 +24,12 @@ function Header(props: headerProps) {
     props.status || StatusType.basic
   );
   const className = `${statusStyle}
-  ${props.isWhiteSpace ? style.inline : ""} 
+  ${props.isWhiteSpace ? style.whitespace : ""} 
+  ${props.isInline ? style.inline : ""}
   ${props.isSub ? style.sub_header : style.header}
   ${style.header}`;
 
-  switch (props.headerType) {
+  switch (props.size) {
     case HeaderType.h1:
       return (
         <h1 className={className}>

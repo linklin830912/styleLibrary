@@ -30,7 +30,7 @@ function Button(props: buttonProps) {
       <div>
         <Header
           status={props.status}
-          headerType={props.size || defaultButtonProps.size}
+          size={props.size || defaultButtonProps.size}
           value0={props.title}
           isOffsets={props.isOffset}
           isSub={props.isSub}

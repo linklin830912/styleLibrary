@@ -45,8 +45,8 @@ function GlobalStorybookStyle() {
 
   const buttonBorderWidth = "3px";
 
-  const headerFontFamily = `Arial, Helvetica, sans-serif`;
-  const subHeaderFontFamily = `"Times New Roman", Times, serif`;
+  const headerFontFamily = `Cambria, Cochin, Georgia, Times, 'Times New Roman', serif`;
+  const subHeaderFontFamily = `'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif`;
 
   const boxShadow = "2px 2px 8px 1px";
   const boxShadowFloat = "0px 0px 10px 0px";
@@ -59,11 +59,11 @@ function GlobalStorybookStyle() {
   const cornerFillet = "3px";
 
   const fontSizeHeader1 = "36px";
-  const fontSizeHeader2 = "24px";
-  const fontSizeHeader3 = "16px";
-  const fontSizeHeader4 = "12px";
-  const fontSizeHeader5 = "8px";
-  const fontSizeHeader6 = "6px";
+  const fontSizeHeader2 = "28px";
+  const fontSizeHeader3 = "24px";
+  const fontSizeHeader4 = "18px";
+  const fontSizeHeader5 = "16px";
+  const fontSizeHeader6 = "12px";
 
   return (
     <Global
@@ -71,12 +71,12 @@ function GlobalStorybookStyle() {
         body: {
           "h1, h2, h3, h4, h5, h6": { margin: 0, padding: 0 },
 
-          h1: { fontSize: fontSizeHeader1 },
-          h2: { fontSize: fontSizeHeader2 },
-          h3: { fontSize: fontSizeHeader3 },
-          h4: { fontSize: fontSizeHeader4 },
-          h5: { fontSize: fontSizeHeader5 },
-          h6: { fontSize: fontSizeHeader6 },
+          h1: { fontSize: fontSizeHeader1, fontWeight: "bolder" },
+          h2: { fontSize: fontSizeHeader2, fontWeight: "bolder" },
+          h3: { fontSize: fontSizeHeader3, fontWeight: "bold" },
+          h4: { fontSize: fontSizeHeader4, fontWeight: "light" },
+          h5: { fontSize: fontSizeHeader5, fontWeight: "lighter" },
+          h6: { fontSize: fontSizeHeader6, fontWeight: "lighter" },
 
           "--font-size-h1": fontSizeHeader1,
           "--font-size-h2": fontSizeHeader2,

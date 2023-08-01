@@ -1,3 +1,8 @@
+.container_div {
+  width: 750px;
+  height: 750px;
+  position: relative;
+}
 .container_button {
   margin: 0;
   padding: 0;
@@ -5,9 +10,34 @@
   border: none;
   cursor: pointer;
   display: inline;
+  position: relative;
 }
 .container_button svg {
-  width: 30px;
-  height: 30px;
   margin: 0 5px;
+}
+.input_div {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+.output_div {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  word-wrap: break-word;
+}
+
+.input_div h1,
+.input_div h2,
+.input_div h3,
+.input_div h4,
+.input_div h5,
+.input_div h6 {
+  position: relative;
+  text-align: end;
+  bottom: 25px;
+  right: 10px;
 }

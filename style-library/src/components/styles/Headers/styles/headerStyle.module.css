@@ -1,5 +1,8 @@
-.inline {
+.whitespace {
   white-space: nowrap;
+}
+.inline {
+  display: inline;
 }
 .sub_header {
   font-family: var(--sub-header-font-family);

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import HeaderType from "../../enums/HeaderType";
 import style from "./styles/inputTextStyle.module.css";
 import { convertHeaderToStyle } from "../../../untils/styles/convertHeaderToStyle";
@@ -9,36 +9,35 @@ type inputTextProps = {
   status?: StatusType;
   size?: HeaderType;
   value?: string;
+  onLoad?: () => void;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
   onBlur?: React.FocusEventHandler<HTMLTextAreaElement>;
-  autoFocus?: boolean;
 };
 
 function InputText(props: inputTextProps) {
   const size = convertHeaderToStyle(style, props.size || HeaderType.h4);
   const status = convertStatusToStyle(style, props.status || StatusType.basic);
-  const [height, setHeight] = useState<number>();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
   useEffect(() => {
-    resize();
+    if (!props.onLoad) return;
+    props.onLoad();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    textareaRef.current?.focus();
+  }, [textareaRef]);
+
   return (
     <textarea
-      style={{ height: height }}
       className={`${style.textarea} ${size} ${status}`}
       onChange={props.onChange}
       onBlur={props.onBlur}
-      onChangeCapture={() => {
-        resize();
-      }}
-      ref={textareaRef}
       defaultValue={props.value}
+      ref={textareaRef}
     />
   );
-
-  function resize() {
-    setHeight(textareaRef.current?.scrollHeight);
-  }
 }
 
 export default InputText;
