@@ -1,8 +1,6 @@
-import DrawerButton from "../../components/formattings/buttons/DrawerButton";
 import ButtonsRoute from "../../components/routes/ButtonsRoute";
 import ErrorRoute from "../../components/routes/ErrorRoute";
 import QuantityPickerRoute from "../../components/routes/QuantityPickerRoute";
-import { Button } from "../../stories/Button";
 
 type route = { name: string; value: string; component: () => JSX.Element };
 export default route;

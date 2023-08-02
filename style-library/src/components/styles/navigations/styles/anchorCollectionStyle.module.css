@@ -1,0 +1,77 @@
+.container_div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: fit-content;
+}
+
+.pointer_container_div {
+  width: 6px;
+  height: 100%;
+}
+.pointer_div {
+  width: 6px;
+  height: 10px;
+}
+
+.main .pointer_container_div {
+  background-color: var(--main-color-shade);
+}
+.background .pointer_container_div {
+  background-color: var(--background-color-shade);
+}
+.disabled .pointer_container_div {
+  background-color: var(--disabled-color-shade);
+}
+.danger .pointer_container_div {
+  background-color: var(--danger-color-shade);
+}
+.ghosted .pointer_container_div {
+  background-color: var(--ghosted-color-shade);
+}
+.special .pointer_container_div {
+  background-color: var(--special-color-shade);
+}
+.basic .pointer_container_div {
+  background-color: var(--basic-color-shade);
+}
+
+.main .pointer_div {
+  background-color: var(--main-color);
+}
+.background .pointer_div {
+  background-color: var(--background-color);
+}
+.disabled .pointer_div {
+  background-color: var(--disabled-color);
+}
+.danger .pointer_div {
+  background-color: var(--danger-color);
+}
+.ghosted .pointer_div {
+  background-color: var(--ghosted-color);
+}
+.special .pointer_div {
+  background-color: var(--special-color);
+}
+.basic .pointer_container_div {
+  background-color: var(--basic-color);
+}
+
+.h1 .pointer_div {
+  height: var(--font-size-h1);
+}
+.h2 .pointer_div {
+  height: var(--font-size-h2);
+}
+.h3 .pointer_div {
+  height: var(--font-size-h3);
+}
+.h4 .pointer_div {
+  height: var(--font-size-h4);
+}
+.h5 .pointer_div {
+  height: var(--font-size-h5);
+}
+.h6 .pointer_div {
+  height: var(--font-size-h6);
+}

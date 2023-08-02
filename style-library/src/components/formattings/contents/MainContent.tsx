@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useEffect } from "react";
 import style from "./styles/mainContent.module.css";
 import MenuPanel from "../panels/MenuPanel";
-import DrawerButton from "../buttons/DrawerButton";
 import ContentPanel from "../panels/ContentPanel";
 import CodePanel from "../panels/CodePanel";
 import { useMainContent } from "./hooks/useMainContent";
+import DrawerButton from "../../styles/buttons/DrawerButton";
 
 export type mainContentProps = {
   panelPortions?: {

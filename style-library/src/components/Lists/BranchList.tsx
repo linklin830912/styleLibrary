@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import style from "./styles/branchListStyle.module.css";
-import { useAppSelector } from "../../../../app/hooks";
-import route from "../../../../app/routes/route";
-import isTrue from "../../../../untils/generals/isTrue";
+import route from "../../app/routes/route";
+import { useAppSelector } from "../../app/hooks";
+import isTrue from "../../untils/generals/isTrue";
 
 type branchListProps = {
   listItems: route[];

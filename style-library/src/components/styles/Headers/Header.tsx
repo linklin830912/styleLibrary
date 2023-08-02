@@ -26,8 +26,7 @@ function Header(props: headerProps) {
   const className = `${statusStyle}
   ${props.isWhiteSpace ? style.whitespace : ""} 
   ${props.isInline ? style.inline : ""}
-  ${props.isSub ? style.sub_header : style.header}
-  ${style.header}`;
+  ${props.isSub ? style.sub_header : style.header}`;
 
   switch (props.size) {
     case HeaderType.h1:

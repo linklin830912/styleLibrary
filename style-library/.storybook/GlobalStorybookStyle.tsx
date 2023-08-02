@@ -22,25 +22,25 @@ function GlobalStorybookStyle() {
   const specialColor = convertToRgba(254, 227, 54);
   const basicColor = convertToRgba(225, 225, 225);
 
-  const mainColorShade = convertRgbTransparency(mainColor, 0.95);
+  const mainColorShade = convertRgbTransparency(mainColor, 0.55);
   const mainColorFont = convertToRgba(225, 225, 225);
 
-  const backgroundColorShade = convertRgbTransparency(backgroundColor, 0.95);
+  const backgroundColorShade = convertRgbTransparency(backgroundColor, 0.55);
   const backgroundColorFont = convertToRgba(225, 225, 225);
 
-  const disabledColorShade = convertRgbTransparency(disabledColor, 0.95);
+  const disabledColorShade = convertRgbTransparency(disabledColor, 0.55);
   const disabledColorFont = convertToRgba(225, 225, 225);
 
-  const dangerColorShade = convertRgbTransparency(dangerColor, 0.95);
+  const dangerColorShade = convertRgbTransparency(dangerColor, 0.55);
   const dangerColorFont = convertToRgba(225, 225, 225);
 
-  const ghostedColorShade = convertRgbTransparency(ghostedColor, 0.95);
+  const ghostedColorShade = convertRgbTransparency(ghostedColor, 0.55);
   const ghostedColorFont = convertToRgba(225, 225, 225);
 
-  const specialColorShade = convertRgbTransparency(specialColor, 0.95);
+  const specialColorShade = convertRgbTransparency(specialColor, 0.55);
   const specialColorFont = convertToRgba(225, 225, 225);
 
-  const basicColorShade = convertRgbTransparency(basicColor, 0.95);
+  const basicColorShade = convertRgbTransparency(basicColor, 0.55);
   const basicColorFont = convertToRgba(150, 150, 150);
 
   const buttonBorderWidth = "3px";
