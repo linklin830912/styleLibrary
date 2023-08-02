@@ -1,7 +1,10 @@
 .container_div {
   width: fit-content;
+  position: relative;
 }
+
 .container_div button {
+  position: relative;
   display: block;
   width: 100%;
   text-align: left;
@@ -9,6 +12,14 @@
   padding: 0px;
   cursor: pointer;
 }
+
+.isOpen .select_div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
 .container_div button[disabled] {
   cursor: default;
 }

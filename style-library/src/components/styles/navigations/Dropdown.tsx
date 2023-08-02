@@ -22,8 +22,16 @@ function Dropdowm(props: dropdownProps) {
   const size = convertHeaderToStyle(style, props.size || defaultSize);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [value, setValue] = useState<string>(props.defaultOption);
+
   return (
-    <div className={`${style.container_div} ${status} ${size}`}>
+    <div
+      className={`${style.container_div} ${status} ${size}`}
+      onBlur={() => {
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 0);
+      }}
+    >
       <div className={style.select_div}>
         <button
           onClick={() => {
@@ -35,6 +43,7 @@ function Dropdowm(props: dropdownProps) {
               size={props.size || defaultSize}
               status={props.status || defaultStatus}
               value0={value}
+              isWhiteSpace
             />
           </div>
         </button>
@@ -42,7 +51,7 @@ function Dropdowm(props: dropdownProps) {
       <div className={style.options_div} style={{ opacity: isOpen ? 1 : 0 }}>
         <button
           disabled={isOpen ? false : true}
-          onClick={() => {
+          onMouseDown={() => {
             handleOptionClick(props.defaultOption);
           }}
         >
@@ -51,14 +60,15 @@ function Dropdowm(props: dropdownProps) {
               size={props.size || defaultSize}
               status={props.status || defaultStatus}
               value0={props.defaultOption}
+              isWhiteSpace
             />
           </div>
         </button>
-
         {props.options.map((option) => (
           <button
+            key={option}
             disabled={isOpen ? false : true}
-            onClick={() => {
+            onMouseDown={() => {
               handleOptionClick(option);
             }}
           >
@@ -67,6 +77,7 @@ function Dropdowm(props: dropdownProps) {
                 size={props.size || defaultSize}
                 status={props.status || defaultStatus}
                 value0={option}
+                isWhiteSpace
               />
             </div>
           </button>
